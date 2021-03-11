@@ -1,0 +1,12 @@
+C:\Github\CpmPedidos\CpmPedidos.Domain\bin\Debug\net5.0\CpmPedidos.Domain.deps.json
+C:\Github\CpmPedidos\CpmPedidos.Domain\bin\Debug\net5.0\CpmPedidos.Domain.dll
+C:\Github\CpmPedidos\CpmPedidos.Domain\bin\Debug\net5.0\ref\CpmPedidos.Domain.dll
+C:\Github\CpmPedidos\CpmPedidos.Domain\bin\Debug\net5.0\CpmPedidos.Domain.pdb
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.AssemblyInfoInputs.cache
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.AssemblyInfo.cs
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.csproj.CoreCompileInputs.cache
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.dll
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\ref\CpmPedidos.Domain.dll
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.pdb
+C:\Github\CpmPedidos\CpmPedidos.Domain\obj\Debug\net5.0\CpmPedidos.Domain.csprojAssemblyReference.cache
