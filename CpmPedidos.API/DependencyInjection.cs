@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CpmPedidos.Interface;
+using CpmPedidos.Repository;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CpmPedidos.API
 {
@@ -14,7 +16,7 @@ namespace CpmPedidos.API
         // EX .. serviceProvider.AddScoped<interface, class>();
         private static void RepositoryDependence(IServiceCollection serviceProvider)
         {
-            
+            serviceProvider.AddScoped<IProdutoRepository, ProdutoRepository>();
         }
     }
 }

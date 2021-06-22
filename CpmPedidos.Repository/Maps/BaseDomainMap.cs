@@ -25,7 +25,7 @@ namespace CpmPedidos.Repository
             // Definindo as Propriedades da entidade Base 
             // ID
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").ValueGeneratedOnAdd();
+            builder.Property(x => x.Id).HasColumnName("id").ValueGeneratedOnAdd(); // Definindo que a coluna irá ser gerada automaticamente
 
             // Criado em
             builder.Property(x => x.CriadoEm).HasColumnName("criado_em").IsRequired();

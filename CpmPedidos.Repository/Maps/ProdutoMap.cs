@@ -6,7 +6,7 @@ namespace CpmPedidos.Repository
 {
     public class ProdutoMap : BaseDomainMap<Produto>
     {
-        ProdutoMap() : base("tb_produto") { }
+        public ProdutoMap() : base("tb_produto") { }
 
         public override void Configure(EntityTypeBuilder<Produto> builder)
         {
@@ -23,6 +23,26 @@ namespace CpmPedidos.Repository
             // Tipo : Bidirecional (As Duas entidades irão ter associações) => Aqui a entidade de Produto possui um Categoria e a Categoria possui uma lista de Produto
             builder.HasOne(x => x.Categoria).WithMany(x => x.Produtos).HasForeignKey(x => x.IdCategoria);
 
+
+            builder
+                .HasMany(x => x.Imagens)
+                .WithMany(x => x.Produtos)
+                .UsingEntity<ImagemProduto>(
+                    x => x.HasOne(f => f.Imagem).WithMany().HasForeignKey(f => f.IdImagem),
+                    x => x.HasOne(f => f.Produto).WithMany().HasForeignKey(f => f.IdProduto),
+                    x =>
+                    {
+                        x.ToTable("tb_imagem_produto");
+
+                        x.HasKey(x => new { x.IdImagem, x.IdProduto });
+
+                        x.Property(x => x.IdProduto).HasColumnName("id_produto").IsRequired();
+                        x.Property(x => x.IdImagem).HasColumnName("id_imagem").IsRequired();
+
+                    }
+
+                );
         }
     }
 }
+

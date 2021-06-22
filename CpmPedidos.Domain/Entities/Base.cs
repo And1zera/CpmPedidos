@@ -6,5 +6,10 @@ namespace CpmPedidos.Domain
     {
         public int Id { get; set; }
         public DateTime CriadoEm { get; set; }
+
+        public void Create()
+        {
+            CriadoEm = DateTime.Now;
+        }
     }
 }

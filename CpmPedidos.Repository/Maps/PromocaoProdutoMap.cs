@@ -6,7 +6,7 @@ namespace CpmPedidos.Repository
 {
     public class PromocaoProdutoMap : BaseDomainMap<PromocaoProduto>
     {
-        PromocaoProdutoMap() : base("tb_promocao_produto") {}
+        public PromocaoProdutoMap() : base("tb_promocao_produto") {}
 
         public override void Configure(EntityTypeBuilder<PromocaoProduto> builder)
         {
@@ -24,7 +24,7 @@ namespace CpmPedidos.Repository
             // Associação 1:N (um para muitos) => Definimos o IdProduto como FK em PromocaoProduto
             builder.Property(x => x.IdProduto).HasColumnName("id_produto").IsRequired();
             // Tipo : Bidirecional (As Duas entidades irão ter associações) => Aqui a entidade de PromocaoProduto possui um Produto e a Produto possui uma lista de PromocaoProduto
-            builder.HasOne(x => x.Produto).WithMany(x => x.PromocaoProdutos).HasForeignKey(x => x.IdProduto);
+            builder.HasOne(x => x.Produto).WithMany(x => x.Promocoes).HasForeignKey(x => x.IdProduto);
         }
     }
 }
